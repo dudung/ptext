@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "First post"
-categories: [blog, test]
-tags: [morning, ramadhan]
 excerpt_separator: <!--more-->
 ---
 
@@ -11,3 +9,6 @@ excerpt_separator: <!--more-->
 Finally it can have a post. Github + Jekyll.
 <!--more-->
 But unfortunately the post can be displayed but the link already has the same pattern with filename.
+
+categories: [blog, test]
+tags: [morning, ramadhan]
