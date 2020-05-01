@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Past post"
+title: "Second post"
 excerpt_separator: <!--more-->
 ---
 
