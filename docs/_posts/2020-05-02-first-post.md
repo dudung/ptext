@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "First post"
+categories: [blog, test]
+tags: [morning, ramadhan]
 excerpt_separator: <!--more-->
 ---
 
