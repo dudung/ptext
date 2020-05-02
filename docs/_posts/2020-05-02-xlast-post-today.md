@@ -21,11 +21,25 @@ whose roots can be obtained from
 x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
 \end{equation}
 
-Implementation of Equation \eqref{eq:equation-quadratic} dan \eqref{eq:equation-quadratic-roots} in JavaScript can be as follow
+Implementation of equation \eqref{eq:equation-quadratic} dan \eqref{eq:equation-quadratic-roots} in JavaScript can be as follow
 
 {% highlight javascript linenos %}
 function roots() {
+	// Get equation parameters
 	var eqn = arguments[0];
+	var a = eqn.a;
+	var b = egn.b;
+	var c = eqn.c;
+	
+	// Calculate discriminant
+	var D = b * b - 4 * a * c;
+	
+	// Calculate roots using 
+	var x1 = (-b + Math.sqrt(D)) / (2 * a);
+	var x2 = (-b - Math.sqrt(D)) / (2 * a);
+	
+	return [x1, x2];
 }
 {% endhighlight %}
 
+where equation \eqref{eq:equation-quadratic-roots} is known as [quadratic formula](https://en.wikipedia.org/wiki/Quadratic_formula).
