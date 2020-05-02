@@ -17,5 +17,3 @@ defaults:
       path: ""
     values:
       layout: "default"
-
-permalink: /ptext/:year/:month/:day/:title
