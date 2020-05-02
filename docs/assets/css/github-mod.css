@@ -1,9 +1,5 @@
-.gutter, .lineno {
-  color: #2288ff;
-	padding: 0px 4px 0px 4px;
- }
-
-.highlight pre { background-color: #f0f0f0;}
+.gutter, .lineno { color: #2288ff; padding: 0px 4px 0px 4px }
+.highlight pre { background-color: #f0f0f0; tab-size: 2 }
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
