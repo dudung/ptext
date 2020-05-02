@@ -1,10 +1,13 @@
 {% if page.ptext %}
 
 <script>
-function draw() {
-	var x = arguments[0].x;
-	var y = arguments[0].y;
+function vis() {
+	var arg = arguments[0];
+	var x = arg.data.x;
+	var y = arg.data.y;
 	var N = Math.min(x.length, y.length);
+	
+	var type = arg.type;
 	
 	var div = document.createElement("div");
 	div.style.textAlign = "center";
@@ -14,21 +17,51 @@ function draw() {
 	can.height = "150";
 	can.style.width = can.width + "px";
 	can.style.height = can.height + "px";
-	can.style.background = "#fafafa";
+	can.style.background = arg.background;
 
 	document.body.append(div);
 	div.append(can);
-
+	
+	var lc = arg.color.line;
+	var pc = arg.color.point;
+	
 	var cx = can.getContext("2d");
-	cx.beginPath();
-	for(var i = 0; i < N; i++) {
-		if(i == 0) {
-			cx.moveTo(x[i], y[i]);
-		} else {
-			cx.lineTo(x[i], y[i]);
+	if(type == "line") {
+		cx.strokeStyle = lc;
+		cx.beginPath();
+		for(var i = 0; i < N; i++) {
+			if(i == 0) {
+				cx.moveTo(x[i], y[i]);
+			} else {
+				cx.lineTo(x[i], y[i]);
+			}
+		}
+		cx.stroke();
+	} else if(type == "point") {
+		cx.fillStyle = pf;
+		for(var i = 0; i < N; i++) {
+			cx.beginPath();
+			cx.arc(x[i], y[i], 4, 0, 2 * Math.PI);
+			cx.fill();
+		}
+	} else if(type == "line-point") {
+		cx.strokeStyle = lc;
+		cx.beginPath();
+		for(var i = 0; i < N; i++) {
+			if(i == 0) {
+				cx.moveTo(x[i], y[i]);
+			} else {
+				cx.lineTo(x[i], y[i]);
+			}
+		}
+		cx.stroke();
+		cx.fillStyle = pc;
+		for(var i = 0; i < N; i++) {
+			cx.beginPath();
+			cx.arc(x[i], y[i], 4, 0, 2 * Math.PI);
+			cx.fill();
 		}
 	}
-	cx.stroke();
 }
 </script>
 

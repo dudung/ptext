@@ -6,21 +6,23 @@ mathjax: true
 ptext: true
 ---
 
-Today we has accomplished in using MathJax and syntax highlighting using Rouge in Jekyll.
-
-<!--div style="text-align: center">
-<canvas width="300" height="150" style="background: #fafafa">
-</canvas>
-</div-->
+Today we has accomplished in using MathJax and syntax highlighting using Rouge in Jekyll. And also introduction to pText in drawing a xy-chart using canvas through JavaScript.
 
 <script>
-data = {
-	x: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300],
-	y: [0, 15, 90, 100, 140, 150, 140, 100, 90, 15, 0],
+chart = {
+	background: "#fffafa",
+	data: {
+		x: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300],
+		y: [0, 65, 100, 130, 145, 150, 140, 120, 90, 50, 0],
+	},
+	type : "line-point",
+	color: {
+		line: "#f88",
+		point: "#e00",
+	},
 };
-draw(data);
+vis(chart);
 </script>
-
 
 A quadratic equation is simply
 
