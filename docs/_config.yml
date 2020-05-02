@@ -17,3 +17,8 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+markdown: kramdown
+
+kramdown:
+  syntax_highlighter: rouge
