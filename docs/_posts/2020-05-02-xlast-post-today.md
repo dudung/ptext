@@ -3,6 +3,7 @@ layout: post
 author: user
 title: X-last post today
 mathjax: true
+ptext: true
 ---
 
 Today we has accomplished in using MathJax and syntax highlighting using Rouge in Jekyll.
@@ -12,20 +13,14 @@ Today we has accomplished in using MathJax and syntax highlighting using Rouge i
 </canvas>
 </div-->
 
-<script lang="javascript">
-var div = document.createElement("div:);
-div.style.textAlign = "center";
-
-var can = document.createElement("canvas");
-can.width = "300";
-can.height = "150";
-can.style.width = can.width + "px";
-can.style.height = can.height + "px";
-can.style.background = "#fafafa";
-
-document.body.append(div);
-div.append(can);
+<script>
+data = {
+	x: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300],
+	y: [0, 15, 90, 100, 140, 150, 140, 100, 90, 15, 0],
+};
+draw(data);
 </script>
+
 
 A quadratic equation is simply
 
@@ -65,3 +60,4 @@ function roots() {
 where equation \eqref{eq:equation-quadratic-roots} is known as [quadratic formula](https://en.wikipedia.org/wiki/Quadratic_formula).
 
 https://markvis-editor.js.org/
+

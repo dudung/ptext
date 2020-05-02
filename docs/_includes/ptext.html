@@ -1,0 +1,35 @@
+{% if page.ptext %}
+
+<script>
+function draw() {
+	var x = arguments[0].x;
+	var y = arguments[0].y;
+	var N = Math.min(x.length, y.length);
+	
+	var div = document.createElement("div");
+	div.style.textAlign = "center";
+
+	var can = document.createElement("canvas");
+	can.width = "300";
+	can.height = "150";
+	can.style.width = can.width + "px";
+	can.style.height = can.height + "px";
+	can.style.background = "#fafafa";
+
+	document.body.append(div);
+	div.append(can);
+
+	var cx = can.getContext("2d");
+	cx.beginPath();
+	for(var i = 0; i < N; i++) {
+		if(i == 0) {
+			cx.moveTo(x[i], y[i]);
+		} else {
+			cx.lineTo(x[i], y[i]);
+		}
+	}
+	cx.stroke();
+}
+</script>
+
+{% endif %}
