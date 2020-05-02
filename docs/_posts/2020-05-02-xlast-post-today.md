@@ -7,7 +7,7 @@ mathjax: true
 
 Today we has accomplished in using MathJax and syntax highlighting using Rouge in Jekyll.
 
-A quadratic equation can is simply
+A quadratic equation is simply
 
 \begin{equation}
 \label{eq:equation-quadratic}
