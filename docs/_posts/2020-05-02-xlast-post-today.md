@@ -8,8 +8,8 @@ ptext: true
 
 Today we has accomplished in using MathJax and syntax highlighting using Rouge in Jekyll. And also introduction to pText in drawing a xy-chart using canvas through JavaScript.
 
-<script>
-chart = {
+<!--ptext-
+{ // xy-chart
 	background: "#fffafa",
 	data: {
 		x: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300],
@@ -20,9 +20,26 @@ chart = {
 		line: "#f88",
 		point: "#e00",
 	},
-};
-vis(chart);
-</script>
+}
+-!ptext-->
+
+d
+
+<!--ptext
+{ // xy-chart
+	background: "#fffafa",
+	data: {
+		x: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300],
+		y: [0, 65, 100, 130, 145, 150, 140, 120, 90, 50, 0],
+	},
+	type : "point",
+	color: {
+		line: "#f88",
+		point: "#e00",
+	},
+}
+!ptext-->
+
 
 A quadratic equation is simply
 
@@ -60,6 +77,4 @@ function roots() {
 {% endhighlight %}
 
 where equation \eqref{eq:equation-quadratic-roots} is known as [quadratic formula](https://en.wikipedia.org/wiki/Quadratic_formula).
-
-https://markvis-editor.js.org/
 
