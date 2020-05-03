@@ -8,38 +8,65 @@ ptext: true
 
 Today we has accomplished in using MathJax and syntax highlighting using Rouge in Jekyll. And also introduction to pText in drawing a xy-chart using canvas through JavaScript.
 
-<!--ptext-
+we can have a graph of line
+
+<ptext>
 { // xy-chart
+	label: "graph-line",
+	caption: "Graph with line",
 	background: "#fffafa",
 	data: {
 		x: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300],
 		y: [0, 65, 100, 130, 145, 150, 140, 120, 90, 50, 0],
 	},
-	type : "line-point",
+	type : "line",
 	color: {
 		line: "#f88",
 		point: "#e00",
 	},
 }
--!ptext-->
+</ptext>
 
-d
 
-<!--ptext
+or points
+
+<ptext>
 { // xy-chart
-	background: "#fffafa",
+	label: "graph-points",
+	caption: "Graph with points",
+	background: "#fafffa",
 	data: {
 		x: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300],
 		y: [0, 65, 100, 130, 145, 150, 140, 120, 90, 50, 0],
 	},
 	type : "point",
 	color: {
-		line: "#f88",
-		point: "#e00",
+		line: "#8f8",
+		point: "#0e0",
 	},
 }
-!ptext-->
+</ptext>
 
+or event both
+
+<ptext>
+{ // xy-chart
+	label: "graph-line-points",
+	caption: "Graph with line and points",
+	background: "#fafaff",
+	data: {
+		x: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300],
+		y: [0, 65, 100, 130, 145, 150, 140, 120, 90, 50, 0],
+	},
+	type : "line-point",
+	color: {
+		line: "#88f",
+		point: "#00e",
+	},
+}
+</ptext>
+
+with few lines of code.
 
 A quadratic equation is simply
 
