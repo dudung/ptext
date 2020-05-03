@@ -8,7 +8,7 @@ This version can be said as the first version that simply works.
 # To-Do
 1. Description and explanation of rendering procedure in HTML canvas.
 2. Files and directories structure for Jekyll.
-3. Procedure between in copying from src/version to docs/assets folders.
+3. Procedure in copying from src/version to docs/assets folders.
 
 
 # Log
