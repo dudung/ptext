@@ -12,6 +12,7 @@ This version can be said as the first version that simply works.
 
 
 # Log
-20200503 <br\>
+20200503 <br/ >
 1743 Works local but not at Github, try to add ``{{ site.baseurl }}`` to ``ptext.html`` in ``_includes`` folder. <br />
 1750 It works. <br />
+1918 Move all experimental post to 0.05 folder. <br />
