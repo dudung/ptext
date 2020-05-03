@@ -1,3 +1,6 @@
+body {
+	padding: 1em;
+}
 a:link, a:visited, a:active {color: blue; text-decoration: none }
 .gutter, .lineno { color: #aa8800; padding: 0px 4px 0px 4px }
 .highlight pre { background-color: #f0f0f0; tab-size: 2 }
