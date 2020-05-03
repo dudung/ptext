@@ -4,4 +4,4 @@ name: Sparisoma Viridi
 position: Creator and project leader
 ---
 
-Viridi can be contacted at [Github](https://github.com/dudung).
+Viridi is a granular physicist that like programming and can be contacted at [Github](https://github.com/dudung).

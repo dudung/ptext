@@ -13,3 +13,5 @@ with simple markup language as [Markdown Here](https://markdown-here.com).
 Actually, there was [butiran.js](https://github.com/dudung/butiran.js)
 followed by [jsxPhys.js](https://github.com/dudung/jsxphys), where
 the last can make tables and its references.
+
+JavaScript is the base of pText, where the developing source is available in [Github](https://github.com/dudung/ptext).

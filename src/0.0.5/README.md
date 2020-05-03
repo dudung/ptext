@@ -2,13 +2,11 @@
 This version can be said as the first version that simply works.
 
 
-# Features
-
-
 # To-Do
-1. Description and explanation of rendering procedure in HTML canvas.
-2. Files and directories structure for Jekyll.
-3. Procedure in copying from src/version to docs/assets folders.
+1. Document features of every version.
+2. Description and explanation of rendering procedure in HTML canvas.
+3. Files and directories structure for Jekyll.
+4. Procedure in copying from src/version to docs/assets folders.
 
 
 # Log
