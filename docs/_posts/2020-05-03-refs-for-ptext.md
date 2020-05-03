@@ -6,7 +6,7 @@ mathjax: true
 ptext: true
 ---
 
-Try to get some marks in document, such as \ptref{graph-line}.
+Try to get some marks in document, such as Figure \ptref{graph-line-points} and fortunately how in works with ``\ptref{graph-points}`` can no be explained.
 
 Today we has accomplished in using MathJax and syntax highlighting using Rouge in Jekyll. And also introduction to pText in drawing a xy-chart using canvas through JavaScript.
 
@@ -74,7 +74,7 @@ or event both
 }
 </ptext>
 
-Figures <ptref>graph-line</ptref>, <ptref>graph-points</ptref>, and <ptref>graph-line-points</ptref> are created with only a few lines of code. It can be seen that figure <ptref>graph-line-points</ptref> has both property of figures <ptref>graph-line</ptref> and <ptref>graph-points</ptref> in drawing the results.
+Figures \ptref{graph-line}, \ptref{graph-points}, and \ptref{graph-line-points} are created with only a few lines of code. It can be seen that figure \ptref{graph-line-points} has both property of figures \ptref{graph-line} and \ptref{graph-points} in drawing the results.
 
 A quadratic equation is simply
 

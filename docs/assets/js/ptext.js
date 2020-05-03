@@ -14,7 +14,10 @@
 	0831 Put HTML anchor before graph for better view when refered.
 	0859 Finish show numbering and testing form multiple refererrer.
 	0910 Tested for multiple referrer and all work.
-	
+	1006 Can replace \ptref{label} to <ptref>label</ptref> but with
+	     must change inner HTML that ruin MathJax numbering.
+	1008 It works but inserting pText before MathJax in front matter.
+	1626 Revert back to using tag <pref></pref> instead of \pref{}.
 	
 	References
 	1. https://talk.jekyllrb.com/t
@@ -22,31 +25,17 @@
 */
 
 
-//var ptBeg = "<!--ptext";
-//var ptEnd = "!ptext-->";
-//var ptGraphNum = 0;
+// Define global variables
 var prefix = "graph";
 var ptGraphs = [];
 
+
+// Call some function to parse post content
 window.onload = function() {
 	ptGetParameters();
 	ptCreateElements();
 	ptCreateReferrers();
-	
-	ptGetMarks();
 };
-
-
-// Try to get some marks
-function ptGetMarks() {
-	content = document.body.innerHTML;
-	//var b = content.find("\ptref{");
-	//console.log(b);
-	//document.body.innerHTML = document.body.innerHTML.replace("\ptref{", "xxx");
-	var beg = content.search("\ptref{");
-	var end = content.indexOf("}", beg);
-	console.log(beg, end);
-}
 
 
 // Create referrers
@@ -224,6 +213,77 @@ function ptParseGraphs() {
 	for(var i = 0; i < ptGraphNum; i++) {
 		//vis("graph" + i, ptGraphs[i]);
 	}
+}
+
+
+//var ptBeg = "<!--ptext";
+//var ptEnd = "!ptext-->";
+//var ptGraphNum = 0;
+
+// Try to get some marks but cannot preserve ``\pref``
+function ptGetMarks() {
+	content = document.body.innerHTML;
+	/*
+	var iterMax = 6;
+	var iter = 0;
+	
+	var code = content.indexOf(">\\ptref{");
+	var mark = content.indexOf("\\ptref{");
+	while(mark > 0) {
+		
+		if(code != mark-1) {
+			var beg = content.indexOf("{g", mark);
+			var end = content.indexOf("}", beg);
+			var whole = content.substring(mark, end + 1);
+			var label = content.substring(beg + 1, end);
+			var tag = "<ptref>" + label + "</ptref>"
+			content = content.replace(whole, tag);
+		} else {
+		}
+		
+		console.log(code, mark, label);
+		
+		code = content.indexOf(">\\ptref{", mark);
+		mark = content.indexOf("\\ptref{", mark);
+		
+		iter++;
+		if(iter >= iterMax) break;
+	}
+	*/
+	
+	var iterMax = 10;
+	var iter = 0;
+
+	var mark = content.indexOf("\\ptref{");
+	var notCode = content[mark-1] != ">"
+
+	while(iter < iterMax) {
+		
+		var beg = content.indexOf("{g", mark);
+		var end = content.indexOf("}", beg);
+		var whole = content.substring(mark, end + 1);
+		var label = content.substring(beg + 1, end);
+		var tag = "<ptref>" + label + "</ptref>"
+		
+		console.log(iter, mark, content[mark-1], notCode, label);
+		
+		if(notCode) {
+			console.log(iter);
+			content = content.replace(whole, tag);
+		} else {
+			mark = content.indexOf("\\ptref{", mark + 1);
+		}
+		
+		mark = content.indexOf("\\ptref{", mark);
+		notCode = content[mark-1] != ">"
+		//console.log(mark, content[mark-1], notCode);
+		
+		if(mark < 0) break;
+		
+		iter++;
+	}
+	
+	document.body.innerHTML = content;	
 }
 
 
