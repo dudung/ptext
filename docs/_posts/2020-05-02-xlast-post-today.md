@@ -8,13 +8,15 @@ ptext: true
 
 Today we has accomplished in using MathJax and syntax highlighting using Rouge in Jekyll. And also introduction to pText in drawing a xy-chart using canvas through JavaScript.
 
-we can have a graph of line
+We can have a graph of line
 
 <ptext>
 { // xy-chart
 	label: "graph-line",
 	caption: "Graph with line",
 	background: "#fffafa",
+	width: 300,
+	height: 150,
 	data: {
 		x: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300],
 		y: [0, 65, 100, 130, 145, 150, 140, 120, 90, 50, 0],
@@ -35,6 +37,8 @@ or points
 	label: "graph-points",
 	caption: "Graph with points",
 	background: "#fafffa",
+	width: 300,
+	height: 150,
 	data: {
 		x: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300],
 		y: [0, 65, 100, 130, 145, 150, 140, 120, 90, 50, 0],
@@ -54,6 +58,8 @@ or event both
 	label: "graph-line-points",
 	caption: "Graph with line and points",
 	background: "#fafaff",
+	width: 300,
+	height: 150,
 	data: {
 		x: [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300],
 		y: [0, 65, 100, 130, 145, 150, 140, 120, 90, 50, 0],
@@ -66,7 +72,7 @@ or event both
 }
 </ptext>
 
-with few lines of code.
+Figures <ptref>graph-line</ptref>, <ptref>graph-points</ptref>, and <ptref>graph-line-points</ptref> are created with only a few lines of code. It can be seen that figure <ptref>graph-line-points</ptref> has both property of figures <ptref>graph-line</ptref> and <ptref>graph-points</ptref> in drawing the results.
 
 A quadratic equation is simply
 
@@ -82,7 +88,7 @@ whose roots can be obtained from
 x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
 \end{equation}
 
-Implementation of equation \eqref{eq:equation-quadratic} dan \eqref{eq:equation-quadratic-roots} in JavaScript can be as follow
+Implementation of equations \eqref{eq:equation-quadratic} and \eqref{eq:equation-quadratic-roots} in JavaScript can be as follow
 
 {% highlight javascript linenos %}
 function roots() {
