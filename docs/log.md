@@ -5,6 +5,26 @@ title: Log
 # Log
 Changes in developing pText are put here, while testing features for a post is in the [posts](blog).
 
+## 0.0.8/20200505-5
+Make examples of emoji in [a post](2020/05/05/emoji.html).
+
+## 0.0.8/20200505-4
+Make examples of block of code in [a post](2020/05/05/fenced-code-blocks.html).
+
+## 0.0.8/20200505-3
+Make examples of equation in [a post](2020/05/05/equation.html).
+
+## 0.0.8/20200505-2
+A post link
+```
+xxxx/yy/zz/a.html
+```
+is consisted of ``xxxx`` for year, ``yy`` for month, ``zz`` for day, dan ``a`` for post title from post filename
+```
+xxxx-yy-zz-post_title.md
+```
+The ``.md`` extension will be exclued.
+
 ## 0.0.8/20200505-1
 Add following line
 ```python
