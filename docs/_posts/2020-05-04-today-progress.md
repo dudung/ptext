@@ -1,0 +1,13 @@
+---
+layout: post
+author: viridi
+title: Today progress
+mathjax: true
+ptext: true
+---
+
+Actually, I only put note about emoji to this repo. Most of my time is for creating four other repos. It is not a good progress for this repo today.
+
+Equation has been tested again, such as $f(x) = ax^2 + bx + c$ in README.md of those repos and all do not work.
+
+Code inserting do work. And I learn about emoji such as :x:, :heavy_check_mark:, and others. 
