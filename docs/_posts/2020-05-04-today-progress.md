@@ -23,4 +23,4 @@ in ``_config.yml`` file
 
 Must install gem, using this [tutorial](https://jekyllrb.com/docs/step-by-step/10-deployment/) then it is solved.
 
-Add ``docs/Gemfile`` and produce ``docs/Gemfile.lock`` by putting the line ``gem jemoji`` after ``get jekyll`` line.
+Add ``docs/Gemfile`` and produce ``docs/Gemfile.lock`` by putting the line ``gem jemoji`` after ``gem jekyll`` line.
