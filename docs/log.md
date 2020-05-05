@@ -17,9 +17,9 @@ Make examples of equation in [a post](2020/05/05/equation.html).
 ## 0.0.8/20200505-2
 A post link
 ```
-xxxx/yy/zz/a.html
+xxxx/yy/zz/post_title.html
 ```
-is consisted of ``xxxx`` for year, ``yy`` for month, ``zz`` for day, dan ``a`` for post title from post filename
+is consisted of ``xxxx`` for year, ``yy`` for month, ``zz`` for day, dan ``post_title`` for post title from a post filename
 ```
 xxxx-yy-zz-post_title.md
 ```
