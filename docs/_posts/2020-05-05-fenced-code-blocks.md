@@ -28,22 +28,22 @@ The code ``roots(1, -5, 6).[0]`` will give 3, while ``roots(1, -5, 6).[1]`` will
 
 ## Block of code
 Previous block of code is obtained using
-``
-```javascript
-function roots(a, b, c) {
-	// Calculate discriminant
-	var D = b * b - 4 * a * c;
-	
-	// Calculate 1st root
-	var x1 = (-b + Math.sqrt(D)) / (2 * a);
 
-	// Calculate 2nd root
-	var x2 = (-b - Math.sqrt(D)) / (2 * a);
-	
-	return [x1, x2];
-}
-```
-``
+	```javascript
+	function roots(a, b, c) {
+		// Calculate discriminant
+		var D = b * b - 4 * a * c;
+		
+		// Calculate 1st root
+		var x1 = (-b + Math.sqrt(D)) / (2 * a);
+
+		// Calculate 2nd root
+		var x2 = (-b - Math.sqrt(D)) / (2 * a);
+		
+		return [x1, x2];
+	}
+	```
+
 as a paragraph.
 
 ## Inline code
