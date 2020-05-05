@@ -5,6 +5,11 @@ title: Log
 # Log
 Changes in developing pText are put here, while testing features for a post is in the [posts](blog).
 
+## 0.0.8/20200506-1
+Found information that conversion from integer with leading zeros could introduce error while drawing in canvas. It can not be understood yet. This version 0.0.8 still uses canvas coordinate. Add field of ``version`` to differ versions. An example without leading zeros of square signal is [here](2020/05/06/ptext-first-plot.html).
+
+Another information from [here](2020/05/06/ptext-first-plot.html), that title in a post can be styled but without space, e.g. ``pText 1<sup style='font-size:60%;'>st</sup> plot``.
+
 ## 0.0.8/20200505-5
 Make examples of emoji in [a post](2020/05/05/emoji.html).
 

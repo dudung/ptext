@@ -36,6 +36,11 @@
 	1711 It works.
 	1712 Begin verion 0.0.5 and make README in the folder.
 	
+	20200506
+	0506 Found inconsistency in drawing.
+	0525 Change input, e.g. 080 to 80, fix the result. Confuse.
+	0531 Add version to chart object to differ different versions.
+	
 	References
 	1. https://jekyllrb.com/docs/ [20200502].
 	2. https://talk.jekyllrb.com/t
@@ -118,7 +123,7 @@ function vis() {
 	cap.innerHTML = "Figure " + (arg.idx + 1)
 		+ " " + arg.caption;
 	cap.style.paddingTop = "0.25em";
-
+	
 	var can = document.createElement("canvas");
 	can.width = arg.width
 	can.height = arg.height;
@@ -130,44 +135,52 @@ function vis() {
 	div.append(can);
 	div.append(cap);
 	
-	var lc = arg.color.line;
-	var pc = arg.color.point;
+	var version = arg.version;
 	
-	var cx = can.getContext("2d");
-	if(type == "line") {
-		cx.strokeStyle = lc;
-		cx.beginPath();
-		for(var i = 0; i < N; i++) {
-			if(i == 0) {
-				cx.moveTo(x[i], y[i]);
-			} else {
-				cx.lineTo(x[i], y[i]);
-			}
-		}
-		cx.stroke();
-	} else if(type == "point") {
-		cx.fillStyle = pc;
-		for(var i = 0; i < N; i++) {
+	if(version == "0.0.8") {
+		draw_v0_0_8();
+	}
+
+	function draw_v0_0_8() {
+		var lc = arg.color.line;
+		var pc = arg.color.point;
+		
+		var cx = can.getContext("2d");
+		if(type == "line") {
+			cx.strokeStyle = lc;
 			cx.beginPath();
-			cx.arc(x[i], y[i], 4, 0, 2 * Math.PI);
-			cx.fill();
-		}
-	} else if(type == "line-point") {
-		cx.strokeStyle = lc;
-		cx.beginPath();
-		for(var i = 0; i < N; i++) {
-			if(i == 0) {
-				cx.moveTo(x[i], y[i]);
-			} else {
-				cx.lineTo(x[i], y[i]);
+			for(var i = 0; i < N; i++) {
+				if(i == 0) {
+					cx.moveTo(x[i], y[i]);
+				} else {
+					cx.lineTo(x[i], y[i]);
+				}
 			}
-		}
-		cx.stroke();
-		cx.fillStyle = pc;
-		for(var i = 0; i < N; i++) {
+			cx.stroke();
+		} else if(type == "point") {
+			cx.fillStyle = pc;
+			for(var i = 0; i < N; i++) {
+				cx.beginPath();
+				cx.arc(x[i], y[i], 4, 0, 2 * Math.PI);
+				cx.fill();
+			}
+		} else if(type == "line-point") {
+			cx.strokeStyle = lc;
 			cx.beginPath();
-			cx.arc(x[i], y[i], 4, 0, 2 * Math.PI);
-			cx.fill();
+			for(var i = 0; i < N; i++) {
+				if(i == 0) {
+					cx.moveTo(x[i], y[i]);
+				} else {
+					cx.lineTo(x[i], y[i]);
+				}
+			}
+			cx.stroke();
+			cx.fillStyle = pc;
+			for(var i = 0; i < N; i++) {
+				cx.beginPath();
+				cx.arc(x[i], y[i], 4, 0, 2 * Math.PI);
+				cx.fill();
+			}
 		}
 	}
 }
