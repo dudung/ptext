@@ -6,7 +6,7 @@ title: Log
 Changes in developing pText are put here, while testing features for a post is in the [posts](blog).
 
 ## 0.0.8/20200507-2
-Try to learn also [Three.js](https://threejs.org/) with this [post](2020/05/07/threejs.html).
+Try to learn also [Three.js](https://threejs.org/) with this [post](2020/05/07/threejs.html). Even the three.js version looks longer than the x3dom version, but the former seems to have more flexibiity. But his opinion should be proved first.
 
 ## 0.0.8/20200507-1
 After unsuccessfull in integrating VRML into a HTML using [X_ITE](http://create3000.de/x_ite/getting-started/#embedding-x-ite-within-a-web-page), finally found the [x3dom](https://www.x3dom.org/), which is much easier to show a 3D content. The fist example is here [here](2020/05/07/learn-x3dom.html).
