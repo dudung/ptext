@@ -5,6 +5,12 @@ title: Log
 # Log
 Changes in developing pText are put here, while testing features for a post is in the [posts](blog).
 
+## 0.0.8/20200507-2
+Try to learn also [Three.js](https://threejs.org/) with this [post](2020/05/07/threejs.html).
+
+## 0.0.8/20200507-1
+After unsuccessfull in integrating VRML into a HTML using [X_ITE](http://create3000.de/x_ite/getting-started/#embedding-x-ite-within-a-web-page), finally found the [x3dom](https://www.x3dom.org/), which is much easier to show a 3D content. The fist example is here [here](2020/05/07/learn-x3dom.html).
+
 ## 0.0.8/20200506-1
 Found information that conversion from integer with leading zeros could introduce error while drawing in canvas. It can not be understood yet. This version 0.0.8 still uses canvas coordinate. Add field of ``version`` to differ versions. An example without leading zeros of square signal is [here](2020/05/06/ptext-first-plot.html).
 
