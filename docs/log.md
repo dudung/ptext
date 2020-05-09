@@ -5,6 +5,12 @@ title: Log
 # Log
 Changes in developing pText are put here, while testing features for a post is in the [posts](blog).
 
+## 0.0.8/20200509-2
+Change ``github-mod.css`` in ``assets/css`` according to default value of css [here](https://stackoverflow.com/a/22510220/9475509), triggered by [previous log entry](#00820200509-1), which requires better look in a post when it has sections using ``## section `` or translated to ``<h2>section</h2>``. Found that default ``jekyll`` will convert ``.`` and ``/`` into nothing and ``white-space`` into ``-``.
+
+## 0.0.8/20200509-1
+Derive the SI model in [this post](2020/05/08/si-model.html) since yesterday.
+
 ## 0.0.8/20200507-2
 Try to learn also [Three.js](https://threejs.org/) with this [post](2020/05/07/threejs.html). Even the three.js version looks longer than the x3dom version, but the former seems to have more flexibiity. But his opinion should be proved first.
 
