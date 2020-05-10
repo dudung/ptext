@@ -5,6 +5,9 @@ title: Log
 # Log
 Changes in developing pText are put here, while testing features for a post is in the [posts](blog).
 
+## 0.0.8/20200510-1
+End version 0.0.8 and start 0.0.9 with adding quran, a sub-project form the past.
+
 ## 0.0.8/20200509-2
 Change ``github-mod.css`` in ``assets/css`` according to default value of css [here](https://stackoverflow.com/a/22510220/9475509), triggered by [previous log entry](#00820200509-1), which requires better look in a post when it has sections using ``## section `` or translated to ``<h2>section</h2>``. Found that default ``jekyll`` will convert ``.`` and ``/`` into nothing and ``white-space`` into ``-``.
 

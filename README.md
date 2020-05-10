@@ -14,4 +14,4 @@ followed by [jsxPhys.js](https://github.com/dudung/jsxphys), where
 the last can make tables and its references.
 
 # Version
-There are some versions [0.0.1](src/0.0.1), [0.0.2](src/0.0.2),  [0.0.3](src/0.0.3), [0.0.4](src/0.0.4), with not so accurate history and now [0.0.5](src/0.0.5) while documenting something.
+There are some versions [0.0.1](src/0.0.1), [0.0.2](src/0.0.2),  [0.0.3](src/0.0.3), [0.0.4](src/0.0.4), with not so accurate history and now [0.0.5](src/0.0.5) while documenting something. Move from version [0.0.8](src/0.0.8) to 0.0.9 in 20200510.

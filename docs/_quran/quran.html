@@ -81,6 +81,16 @@ https://stackoverflow.com/questions/52019221/css-numbering-printed-pages-in-chro
 <script src="018.js"></script>
 <script src="019.js"></script>
 <script src="020.js"></script>
+<script src="021.js"></script>
+<script src="022.js"></script>
+<script src="023.js"></script>
+<script src="024.js"></script>
+<script src="025.js"></script>
+<script src="026.js"></script>
+<script src="027.js"></script>
+<script src="028.js"></script>
+<script src="029.js"></script>
+<script src="030.js"></script>
 
 <h1 class="page-title">Al Qur'an</h1>
 <p>
@@ -107,17 +117,12 @@ for(var i = 0; i < N; i++) {
 		+ (i + 1) + "</font> "
 		+ "<font style='color: gray; font-weight: normal;' id='"
 		+ sid + "'>" + title + " (" + Nay + ")</font>, ";
-	document.getElementById(sid)
-		.addEventListener("click", function(sid) {
-			var ssid = arguments[0];
-			console.log(ssid);
-		});
-	console.log(surid, sid);
+	document.getElementById(sid).addEventListener("click", showSurah);
 }
 
 function showSurah() {
 	var e = event;
-	console.log(e.target);
+	console.log(e.target, sid);
 }
 </script>
 
