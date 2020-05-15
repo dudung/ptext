@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<style>
+body {
+	padding: 20px;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+.page-title{
+	font-family: Georgia, serif;
+	font-weight: 400;
+	font-size: 1.5em;
+	text-align: center;
+	color: blue;
+}
+
+.ayat, .bismillah {
+	font-family: litelpmq;
+	font-size: 1.8em;
+	line-height: 2.4;
+	font-weight: 100;
+	font-style: normal;
+}
+
+.bismillah {
+	border-top: 1px solid #e6e7e7;
+	text-align: center;
+	padding: 1em 0 0;
+	margin:0;
+}
+
+.ayat {
+	margin-top: .5em; text-align: right;
+	direction: rtl;
+}
+
+.bacaan {
+	font-family: georgia, serif;
+	font-weight: 400;
+	padding: 1em 0;
+}
+
+.arti, .ayat, .bacaan{
+	display: block;
+}
+</style>
+</head>
+<body>
+
+<!--
+QLQ = "10d"
+https://www.w3schools.com/cssref/pr_print_pageba.asp
+https://stackoverflow.com/questions/52019221/css-numbering-printed-pages-in-chrome
+-->
+
+<script src="000.js"></script>
+<script src="001.js"></script>
+<script src="002.js"></script>
+<script src="003.js"></script>
+<script src="004.js"></script>
+<script src="005.js"></script>
+<script src="006.js"></script>
+<script src="007.js"></script>
+<script src="008.js"></script>
+<script src="009.js"></script>
+<script src="010.js"></script>
+<script src="011.js"></script>
+<script src="012.js"></script>
+<script src="013.js"></script>
+<script src="014.js"></script>
+<script src="015.js"></script>
+<script src="016.js"></script>
+<script src="017.js"></script>
+<script src="018.js"></script>
+<script src="019.js"></script>
+<script src="020.js"></script>
+<script src="021.js"></script>
+<script src="022.js"></script>
+<script src="023.js"></script>
+<script src="024.js"></script>
+<script src="025.js"></script>
+<script src="026.js"></script>
+<script src="027.js"></script>
+<script src="028.js"></script>
+<script src="029.js"></script>
+<script src="030.js"></script>
+<script src="031.js"></script>
+<script src="032.js"></script>
+<script src="033.js"></script>
+<script src="034.js"></script>
+<script src="035.js"></script>
+<script src="036.js"></script>
+<script src="037.js"></script>
+
+
+<h1 class="page-title">Al Qur'an</h1>
+<p>
+<a href="https://litequran.net">Litequran.net</a>: Baca Al Quran Online lengkap Bacaan Latin & Terjemah Bahasa Indonesia.
+</p>
+
+<script>
+var N = Surah.length;
+var divs = [];
+var content = "";
+for(var i = 0; i < N; i++) {
+	var div = document.createElement("div");
+	div.innerHTML = Surah[i];
+	divs.push(div);
+}
+var p = document.createElement("p");
+document.body.append(p);
+for(var i = 0; i < N; i++) {
+	var title = divs[i].getElementsByTagName("h1")[0].innerText;
+	var surid = divs[i].getElementsByTagName("h1")[0].id;
+	var Nay = divs[i].getElementsByTagName("li").length;
+	var sid = "s" + surid;
+	p.innerHTML += "<font style='color: blue; font-weight: bold;'>"
+		+ (i + 1) + "</font> "
+		+ "<font style='color: gray; font-weight: normal;' id='"
+		+ sid + "'>" + title + " (" + Nay + ")</font>, ";
+	document.getElementById(sid).addEventListener("click", showSurah);
+}
+
+function showSurah() {
+	var e = event;
+	console.log(e.target, sid);
+}
+</script>
+
+</body>
+</html>
