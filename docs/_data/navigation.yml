@@ -6,5 +6,7 @@
   link: /blog.html
 - name: About
   link: /about.html
+- name: Tag
+  link: /tag.html
 - name: Log
   link: /log.html

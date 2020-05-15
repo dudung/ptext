@@ -5,6 +5,9 @@ title: Log
 # Log
 Changes in developing pText are put here, while testing features for a post is in the [posts](blog).
 
+## 0.0.8/20200515-1
+Create [tag page](tag.html) from this [tutorial](https://codinfox.github.io/dev/2015/03/06/use-tags-and-categories-in-your-jekyll-based-github-pages/), which is very helpful and simple. And about category, files with the same category will be put in the same folder.
+
 ## 0.0.8/20200510-1
 End version 0.0.8 and start 0.0.9 with adding quran, a sub-project form the past.
 
